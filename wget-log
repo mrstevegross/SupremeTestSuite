@@ -1,0 +1,19 @@
+--2017-11-06 08:28:12--  http://forecast.weather.gov/MapClick.php?CityName=Shreveport
+Resolving forecast.weather.gov... 23.206.120.136, 2600:1409:0:493::116, 2600:1409:0:496::116
+Connecting to forecast.weather.gov|23.206.120.136|:80... connected.
+HTTP request sent, awaiting response... 302 Moved Temporarily
+Location: http://forecast.weather.gov/zipcity.php?inputstring=Shreveport, [following]
+--2017-11-06 08:28:12--  http://forecast.weather.gov/zipcity.php?inputstring=Shreveport,
+Reusing existing connection to forecast.weather.gov:80.
+HTTP request sent, awaiting response... 302 Moved Temporarily
+Location: http://forecast.weather.gov/MapClick.php?CityName=Shreveport&state=LA&site=SHV&textField1=32.4716&textField2=-93.7978&e=0 [following]
+--2017-11-06 08:28:12--  http://forecast.weather.gov/MapClick.php?CityName=Shreveport&state=LA&site=SHV&textField1=32.4716&textField2=-93.7978&e=0
+Reusing existing connection to forecast.weather.gov:80.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘MapClick.php?CityName=Shreveport’
+
+MapClick.php?CityName=Shreveport                [<=>                                                                                        ]       0  --.-KB/s               MapClick.php?CityName=Shreveport                [ <=>                                                                                       ]  70.81K  --.-KB/s    in 0.06s   
+
+2017-11-06 08:28:13 (1.09 MB/s) - ‘MapClick.php?CityName=Shreveport’ saved [72510]
+
