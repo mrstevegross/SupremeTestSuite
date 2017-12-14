@@ -10,7 +10,6 @@ from IAAssertMenuOptions import Verify_Menu_Options
 import xlrd
 import sys
 from IAVariables import workbookNameData
-# import HTMLTestRunner
 
 workbook = xlrd.open_workbook(workbookNameData)
 worksheet = workbook.sheet_by_index(0)
