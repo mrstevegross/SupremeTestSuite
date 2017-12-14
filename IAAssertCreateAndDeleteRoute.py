@@ -14,6 +14,7 @@ from pyvirtualdisplay import Display
 from IAVariables import workbookNameData
 # -*- coding: utf-8 -*-
 
+
 def AdjustResolution():
     display = Display(visible=0, size=(800, 800))
     display.start()
@@ -40,7 +41,7 @@ class Verify_Login_And_Saving_Routes(unittest.TestCase):
     def test_login_route_creation_and_deletion(self):
         driver = self.driver
 
-    #   HEAD TO CO WEBSITE
+    #   HEAD TO IA WEBSITE
         driver.get(url)
 
     #   SELECT THE FAVORITE PAGE
@@ -86,7 +87,7 @@ class Verify_Login_And_Saving_Routes(unittest.TestCase):
         assert (driver.find_element_by_id("favorites-content-area").is_displayed()), 'Event Edits Creation Button Is Not Displayed' # Did we make it to the 'Favorites' page
 
 
-#        driver.save_screenshot('FavoritesPageScreenShot.png')
+    #   DELETE THE SAVED ROUTE 
 
         routeHamburgerMenuWait = WebDriverWait(driver, 30).until(EC.element_to_be_clickable((By.XPATH, '//*[@title="Customize and control Your 511"]')))
 
