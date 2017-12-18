@@ -15,6 +15,7 @@ from IAVariables import workbookNameData
 # -*- coding: utf-8 -*-
 
 
+# test comment
 def AdjustResolution():
     display = Display(visible=0, size=(800, 800))
     display.start()
