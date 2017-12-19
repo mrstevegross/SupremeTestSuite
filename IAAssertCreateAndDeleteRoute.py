@@ -16,10 +16,12 @@ from IAVariables import workbookNameData
 
 
 def AdjustResolution():
+    # Every helper function should have a docstring. Something like:
+    # """This function does blah blah blah"""
     display = Display(visible=0, size=(800, 800))
     display.start()
 
-
+# Constants like this should be a "Constants" class; and each variable name should be ALL_CAPS.
 workbook = xlrd.open_workbook(workbookNameData)
 worksheet = workbook.sheet_by_index(0)
 url = worksheet.cell(1, 0).value
@@ -46,7 +48,11 @@ class Verify_Login_And_Saving_Routes(unittest.TestCase):
 
     #   SELECT THE FAVORITE PAGE
         pageLoadWait = WebDriverWait(driver, 30).until(EC.element_to_be_clickable((By.ID, 'favoriteBtn')))
+        # You should never need a time.sleep() in a webdriver test. As long as your find_element* calls have
+        # appropriate timeouts, you should NOT need these.
         time.sleep(2)
+        # Consolidate this into one line:
+        #   driver.find_element_by_id('favoriteBtn').click()
         signInButton = driver.find_element_by_id('favoriteBtn')
         signInButton.click()
 
@@ -107,6 +113,12 @@ class Verify_Login_And_Saving_Routes(unittest.TestCase):
                 alert = driver.switch_to.alert.accept()
             except:
                 break
+        # Simplify this a bit. Are you trying to verify that the element is absent? If so, do someting like this:
+        # try:
+        #   driver.find...
+        #   self.fail('reason for failure here')
+        # except SomeKindOfExceptionhere:
+        #   pass
         try:
             driver.find_element_by_xpath('//*[@title="Customize and control Your 511"]').is_displayed()
             assert False
